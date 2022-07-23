@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 
-const {User/*, validate*/} = require('../models/User');
+const User = require('../models/User');
 
 router.get('/', (req, res) => {
     User.find((err, doc) => {

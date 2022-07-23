@@ -9,6 +9,7 @@ const dbConnect = require("./dbconnect");
 const userRegistration = require("./controller/UserRegistration");
 const login =require("./controller/Login");
 const userControl = require("./controller/UserControls");
+const postControl = require("./controller/PostController");
 
 dbConnect();
 const app = express();
@@ -19,6 +20,8 @@ app.use(cors());
 app.use("/userRegistration", userRegistration);
 app.use("/login",login);
 app.use("/userControl",userControl);
+app.use("/post", postControl);
+
 
 
 
